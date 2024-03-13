@@ -1,0 +1,361 @@
+/* Root makes life easier, everytime needed to add color, margin padding or specifics throughout pages this will help keep a consistency in design and whenever changed something in root, it will change the entire page */
+:root {
+    --special-color:#FA4A0C;
+    --second-color:#737373;
+    --dark-color:#000000;
+    --light-color:#FFFFFF;
+
+}
+
+/******* Global styles *******/
+/* Main font family of entire page */
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+/******** Top Header Styles *******/
+
+/* position:relative; to adjust position of element relative then normal position*/
+.logo {
+    width: 500px; 
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+/* Animation allow logo to pulse 1s repeadatly with a certain scale to grow from 0% to 100%*/
+.logo.logo-animation {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* position:fixed; used to position element relative to the browser window no matter how to scroll  */
+.navigation {
+    position: fixed;
+    top: 1px;
+    right: 20px;
+    margin-top: 100px;
+    font-weight:bold;
+    color: var(--special-color);
+    text-decoration: none;
+}
+
+/* targeting the navigation a spcefically  */
+.navigation a {
+    color: var(--second-color);
+    text-decoration: none;
+    padding: 0 40px;
+    font-size: 35px;
+}
+
+/* used when hovering over navigation a list */
+.navigation a:hover {
+    color:--special-color;
+}
+
+/* banner display with all heading displayed over */
+.food-banner {
+    position: relative;
+    margin-top: 30px;
+}
+
+/* adds dark fade of 50% less brightness to banner image */
+.darkness {
+    filter: brightness(50%);
+}
+
+
+.phone-layout {
+    width: 1000px;
+}
+
+/* inline-block used to make element act as an inline element while also blocking properties */
+.heading {
+    position: relative;
+    display: inline-block;
+}
+
+.food-banner {
+    width: 100%;
+    height: auto;
+}
+
+/* allows text in heading to hover over banner, centered */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--light-color);
+}
+
+.text-overlay h3,
+.text-overlay h1,
+.text-overlay h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.text-overlay button {
+    background-color: transparent;
+    color: var(--light-color);
+    width: 180px;
+    height: 60px;
+    font-weight: 800;
+    border-radius: 20px;
+}
+
+.text-overlay button:hover {
+    background-color: var(--special-color);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/* overlay of 2 images of iphones, with a little overlapping (still need to figure out how */
+.phone-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    height: 600px;
+}
+
+.phone-layout .image1 {
+    position: absolute;
+    bottom: -20px; 
+    width: auto; 
+    max-width: 100%;
+}
+
+
+/********* Main style *********/
+
+/* setting main margin for entire section, making it easier to style individually */
+.main-margin {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.line {
+    border-top: 0.5px black;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 90px;
+}
+/* box-shadow adds background shadow of how tick or dark you want it */
+.app-works{
+    font-size: 50px;
+    font-weight:500;
+    text-align: center;
+    margin-top: -5%;
+}
+
+.login-section,
+.app-section,
+.payment-section {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Login section: allowing proper width, font-size and color to each section */
+.login-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.phone-login {
+    width: 50%;
+}
+
+.login-content {
+    width: 45%; 
+}
+
+.login-content h3{
+    font-size: 25px;
+    color: #FA4A0C;
+}
+
+.login-content h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.login-content p {
+    font-size: 20px;
+    color: var(--second-color);
+}
+
+/* Exploring Section: allowing proper width, font-size and color to each section */
+.app-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone-app {
+    width: 50%;
+    order: 1;
+}
+
+.app-content {
+    width: 45%; 
+}
+
+.app-content h3 {
+    font-size: 25px;
+    color: var(--special-color);
+}
+
+.app-content h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.app-content p {
+    font-size: 20px;
+    color: var(--second-color);
+}
+
+
+/* Payment Section: allowing proper width, font-size and color to each section */
+.payment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone-payment {
+    width: 50%;
+}
+
+.payment-content {
+    width: 45%;
+}
+
+.payment-content h3 {
+    font-size: 25px;
+    color: var(--special-color);
+}
+
+.payment-content h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.payment-content p {
+    font-size: 20px;
+    color: var(--second-color);
+}
+
+/******** Footer styles *********/
+
+/* position:relative; to adjust position of element relative then normal position*/
+.container {
+    position: relative;
+}
+
+/* position:absolute; allows to position element relative to it's nearest position */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-overlay h2,
+.text-overlay h4,
+.text-overlay button {
+    margin: 10px 0;
+}
+
+.footer-image {
+    width: 100%; 
+    max-height: 50%; 
+    filter: brightness(70%);
+}
+
+.container h2 {
+    font-size: 45px;
+    color: var(--light-color);
+}
+
+.container p {
+    color: var(--light-color);
+}
+
+
+/* making sure button had border-radius of certain px */
+.play-button,
+.app-button {
+    background-color: transparent;
+    color: var(--light-color);
+    width: 150px;
+    height: 70px;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+.play-button:hover,
+.app-button:hover {
+    background-color: var(--special-color);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffff; 
+}
+
+.logo {
+    width: 500px; 
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+/********** Skip links: hiding **********/
+
+/* in need to make it invisable on the page, allowing z-index to ensure element appears on top of others  */
+#skip-links {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#skip-links a {
+    position: relative;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#skip-links a:focus {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,38 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head: Link contains 
+    - font required for entire site taken from google.font
+    - Connection between the main and css -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>Midterm Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <nav id="skip-links">
+        <ul>
+            <li><a href="#header" aria-label="Skip to Header">Skip to Header</a></li>
+            <li><a href="#main-content" aria-label="Skip to Main Content">Skip to Main Content</a></li>
+            <li><a href="#footer" aria-label="Skip to Footer">Skip to Footer</a></li>
+        </ul>
+    </nav>
+    <!-- Header conatins main logo, navigation list with href link to the page, main banners with heading hovering over and submittion buttons -->
+    <header id="header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+        <img src="images/logo.png" alt="companies logo with chefs hat" class="logo logo-animation">
 
-    <header>
-        <img src="images/logo.png" alt="companies logo with chefs hat">
-
-        <nav>
+        <nav class="navigation" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
             <a href="index.html">Home</a>
             <a href="#">Product</a>
             <a href="faq.html">Faq</a>
-            <a href="contact.html">contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
+        <div class="heading">
+            <img src="images/foodbanner.jpeg" alt="variety of food on a table" class="food-banner darkness">
+            <div class="text-overlay">
+                <h3>Food app</h3>
+                <h1>Why stay hungry when you can order form Bella Onojie</h1>
+                <h4> Download the bella onoje's food app now on</h4>
 
-        <h2>Food app</h2>
-        <h1>Why stay hungry when you can order form Bella Onojie</h1>
-        <h3> Download the bella onoje's food app now on</h3>
+                <button aria-label="Download from Playstore">Playstore</button>
+                <button aria-label="Download from App store">App Store</button>
+            </div>
+        </div>
 
-        <button>Playstore</button>
-        <button>App Store</button>
+        <div class="phone-layout">
+            <img src="images/twophone.png" alt="iphone layout of app with food for everyone" class="image1">
+        </div>
 
-        <img src="images/foodbanner.jpeg" alt="variety of food on a table">
-        <img src="images/phoneheader.png" alt="iphone layout of app with food for everyone">
-        <img src="images/phoneheader2.png" alt="iphone layout of home page of app">
+        <hr class="line">
+        
+        <p class="app-works">How the app works</p>
+
     </header>
 
-    
+    <main id="main-content" role="main" itemscope itemtype="https://schema.org/WebPageElement">
+        <!-- Login section of phone app in it's own ssection for css styling -->
+        <div class="main-margin">
+            <div class="phone-display">
+                <section class="login-section" itemscope itemtype="https://schema.org/FAQPage">
+                    <img src="images/phonelogin.png" alt="iphone layout of login page of app" class="phone-login">
+                    <div class="login-content">
+                        <h3>Create an account</h3>
+                        <h2>Create/login to existing account to get started.</h2>
+                        <p>An account is created with your email and a desired password.</p>
+                    </div>
+                </section>
+                <!-- Main app section of phone app in it's own ssection for css styling -->
+                <section class="app-section" itemscope itemtype="https://schema.org/FAQPage">
+                    <img src="images/phoneapp.png" alt="iphone layout of home page of app" class="phone-app">
+                    <div class="app-content">
+                        <h3>Explore while shopping</h3>
+                        <h2>Shop for your favorites meal as e dey hot.</h2>
+                        <p>Shop for your favorite meals or drinks and enjoy while doing it.</p>
+                    </div>
+                </section>
+                <!-- Payment section of phone app in it's own ssection for css styling -->
+                <section class="payment-section" itemscope itemtype="https://schema.org/FAQPage">
+                    <img src="images/phonepayment.png" alt="iphone layout of payment page of app" class="phone-payment">
+                    <div class="payment-content">
+                        <h3>Checkout</h3>
+                        <h2>When you done check out and get it delivered.</h2>
+                        <p>When you done check out and get it delivered with ease.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Container for footerbanner, heading and buttons, must be in smae div for css styling -->
+        <div class="container" itemscope itemtype="https://schema.org/ItemList">
+            <img src="images/footerbanner.jpeg" alt="shelf of bagels and sink in kitchen" class="footer-image">
+            <div class="text-overlay">
+                <h2>Download the app now.</h2>
+                <p>Available on your favorite store. Start your premium experience now</p>
+                <button class="play-button" aria-label="Download from Playstore">Playstore</button>
+                <button class="app-button" aria-label="Download from App store">App Store</button>
+            </div>
+        </div>
+
+    </main>
+    <!-- Footer contains logo and copywright symbols for end of website -->
+    <footer id="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+        <img src="images/logo.png" alt="companies logo with chefs hat" class="logo">
+        <p>Just type what's on your mind and we'll</p>
+
+        <p class="Copyright">Copywright 2020 Bella Onojie.com</p>
+    </footer>
 </body>
 
 </html>

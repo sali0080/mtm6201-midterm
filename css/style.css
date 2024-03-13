@@ -1,0 +1,150 @@
+/* Root makes life easier, everytime needed to add color, margin padding or specifics throughout pages this will help keep a consistency in design and whenever changed something in root, it will change the entire page */
+:root {
+    --special-color:#FA4A0C;
+    --second-color:#737373;
+    --dark-color:#000000;
+    --light-color:#FFFFFF;
+
+}
+
+/******* Global styles *******/
+/* Main font family of entire page */
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main {
+    background-color: var(--second-color);
+}
+h1 {
+    color: var(--second-color);
+    font-size: 50px;
+    text-align: center;
+}
+
+/******** Top Header Styles *******/
+
+/* position:relative; to adjust position of element relative then normal position*/
+.logo {
+    width: 500px; 
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+/* position:fixed; used to position element relative to the browser window no matter how to scroll  */
+.navigation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin-top: 100px;
+    font-weight: bold;
+    color: var(--special-color);
+    text-decoration: none;
+    justify-content: space-between ;
+}
+
+/* targeting the navigation a spcefically  */
+.navigation a {
+    color: var(--second-color);
+    text-decoration: none;
+    padding: 20px 20px; 
+    font-size: 35px;
+}
+
+/* used when hovering over navigation a list */
+.navigation a:hover {
+    color: var(--special-color);
+}
+
+
+/********* Main style *********/
+.main {
+    padding: 20px;
+}
+
+/* styling contact form each box with a certain px and black color */
+.contact-form {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* display:block; used to make  an element behave like a block-level element*/
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+/* rezies allows to resize the text box vertically */
+textarea {
+    resize: vertical;
+}
+
+/* styling submittion button to expand to edge left and right, adding animation to shake 0.5s with keyframe for transformation left and right */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--special-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--light-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: shake 0.5s infinite alternate;
+}
+
+.submit-button:hover {
+    background-color: var(--second-color);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/******** Footer styles *********/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-color);
+}
+
+footer p {
+    margin: 0;
+    color: var(--second-color);
+}

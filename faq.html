@@ -1,0 +1,70 @@
+<!-- Head: Link contains 
+    - font required for entire site taken from google.font
+    - Connection between the main and css -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Food App</title>
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+ <!-- Header contains logo, navigation list and href to link to the other pages-->
+<header role="banner">
+    <img src="images/logo.png" alt="companies logo with chefs hat" class="logo">
+    <nav class="navigation" role="navigation">
+        <a href="index.html">Home</a>
+        <a href="#">Product</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1 role="heading" aria-level="1">FAQ</h1>
+</header>
+
+<main role="main">
+    <div class="main-margin">
+        <!-- FAQ questions in own div for proper marging-->
+        <div class="faq-section" role="group" itemscope itemtype="https://schema.org/FAQPage">
+            <h3 role="heading" aria-level="3" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <span itemprop="name">How do I create an account?</span>
+            </h3>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p class="answer" itemprop="text">To create an account, simply click on the "Sign Up" button on the homepage and fill out the required information.</p>
+            </div>
+        </div>
+        <div class="faq-section" role="group" itemscope itemtype="https://schema.org/FAQPage">
+            <h3 role="heading" aria-level="3" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <span itemprop="name">How can I contact customer support?</span>
+            </h3>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p class="answer" itemprop="text">You can contact our customer support team by emailing support@bellaonojie.com or by calling our toll-free number 1-123-456-7890.</p>
+            </div>
+        </div>
+        <div class="faq-section" role="group" itemscope itemtype="https://schema.org/FAQPage">
+            <h3 role="heading" aria-level="3" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                <span itemprop="name">Can I customize my order?</span>
+            </h3>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p class="answer" itemprop="text">Yes, you can customize your order by adding special instructions in the order notes section during checkout.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer contains paragraph for a little message and copywright symbols for end of website -->
+<footer role="contentinfo">
+    <div class="footer-content">
+        <p>Just type what's on your mind and we'll help!</p>
+    </div>
+    <p>&copy; 2024 Contact Us. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

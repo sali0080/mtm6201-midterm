@@ -1,0 +1,92 @@
+/* Root makes life easier, everytime needed to add color, margin padding or specifics throughout pages this will help keep a consistency in design and whenever changed something in root, it will change the entire page */
+:root {
+    --special-color:#FA4A0C;
+    --second-color:#737373;
+    --dark-color:#000000;
+    --light-color:#FFFFFF;
+
+}
+
+
+/******* Global styles *******/
+/* Main font family of entire page */
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: var(--second-color);
+    font-size: 40px;
+    text-align: center;
+}
+
+/******** Top Header Styles *******/
+
+/* position:relative; to adjust position of element relative then normal position*/
+.logo {
+    width: 500px; 
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+/* position:fixed; used to position element relative to the browser window no matter how to scroll  */
+.navigation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin-top: 100px;
+    font-weight: bold;
+    color: var(--special-color);
+    text-decoration: none;
+}
+
+/* targeting the navigation a spcefically  */
+.navigation a {
+    color: var(--second-color);
+    text-decoration: none;
+    padding: 0 40px;
+    font-size: 35px;
+}
+
+/* used when hovering over navigation a list */
+.navigation a:hover {
+    color: var(--special-color);
+}
+
+
+/********* Main style *********/
+
+/* adding margin between each heading and paragraph with font-size */
+.main-margin {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-section h3 {
+    font-size: 25px;
+    color: var(--special-color);
+}
+
+.faq-section p {
+    font-size: 20px;
+    color: #737373;
+    margin: 50px; 
+}
+
+/******** Footer styles *********/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-color);
+}
+
+footer p {
+    margin: 0;
+    color: var(--second-color);
+}
