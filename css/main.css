@@ -1,9 +1,11 @@
 /* Root makes life easier, everytime needed to add color, margin padding or specifics throughout pages this will help keep a consistency in design and whenever changed something in root, it will change the entire page */
 :root {
-    --special-color:#FA4A0C;
-    --second-color:#737373;
-    --dark-color:#000000;
-    --light-color:#FFFFFF;
+    --special-color: #FA4A0C;
+    --second-color: #737373;
+    --dark-color: #000000;
+    --light-color: #FFFFFF;
+    --media-color: #252B42;
+
 
 }
 
@@ -17,7 +19,7 @@ html {
 
 /* position:relative; to adjust position of element relative then normal position*/
 .logo {
-    width: 500px; 
+    width: 500px;
     position: relative;
     top: 20px;
     right: 20px;
@@ -32,12 +34,18 @@ html {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
+}
+
+.hamburger-menu {
+    display: none;
 }
 
 /* position:fixed; used to position element relative to the browser window no matter how to scroll  */
@@ -46,7 +54,7 @@ html {
     top: 1px;
     right: 20px;
     margin-top: 100px;
-    font-weight:bold;
+    font-weight: bold;
     color: var(--special-color);
     text-decoration: none;
 }
@@ -61,13 +69,14 @@ html {
 
 /* used when hovering over navigation a list */
 .navigation a:hover {
-    color:--special-color;
+    color: --special-color;
 }
 
 /* banner display with all heading displayed over */
 .food-banner {
     position: relative;
     margin-top: 30px;
+    background-color: #252B42;
 }
 
 /* adds dark fade of 50% less brightness to banner image */
@@ -129,16 +138,17 @@ h1 {
 .phone-layout {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
     height: 600px;
 }
 
 .phone-layout .image1 {
     position: absolute;
-    bottom: -20px; 
-    width: auto; 
+    bottom: -20px;
+    width: auto;
     max-width: 100%;
+    align-items: center;
 }
 
 
@@ -156,18 +166,13 @@ h1 {
     margin-right: 100px;
     margin-bottom: 90px;
 }
+
 /* box-shadow adds background shadow of how tick or dark you want it */
-.app-works{
+.app-works {
     font-size: 50px;
-    font-weight:500;
+    font-weight: 500;
     text-align: center;
     margin-top: -5%;
-}
-
-.login-section,
-.app-section,
-.payment-section {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Login section: allowing proper width, font-size and color to each section */
@@ -175,7 +180,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .phone-login {
@@ -183,10 +188,10 @@ h1 {
 }
 
 .login-content {
-    width: 45%; 
+    width: 45%;
 }
 
-.login-content h3{
+.login-content h3 {
     font-size: 25px;
     color: #FA4A0C;
 }
@@ -214,7 +219,7 @@ h1 {
 }
 
 .app-content {
-    width: 45%; 
+    width: 45%;
 }
 
 .app-content h3 {
@@ -238,6 +243,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .phone-payment {
@@ -286,8 +292,8 @@ h1 {
 }
 
 .footer-image {
-    width: 100%; 
-    max-height: 50%; 
+    width: 100%;
+    max-height: 50%;
     filter: brightness(70%);
 }
 
@@ -298,6 +304,10 @@ h1 {
 
 .container p {
     color: var(--light-color);
+}
+
+.media-paragraph {
+    display: none;
 }
 
 
@@ -322,16 +332,25 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #ffff; 
+    background-color: #ffff;
 }
 
 .logo {
-    width: 500px; 
+    width: 500px;
 }
 
 .footer-content {
     display: flex;
     align-items: center;
+}
+
+.hide-footer {
+    display: none;
+}
+
+footer button {
+    background: none;
+    border-style: none;
 }
 
 /********** Skip links: hiding **********/
@@ -358,4 +377,254 @@ footer {
 #skip-links a:focus {
     opacity: 1;
     visibility: visible;
+}
+
+/*************** Media Query - Iphone layout ******************/
+
+@media screen and (max-width: 414px) {
+
+    /* Logo and Main NAV */
+    .logo {
+        width: 200px;
+        margin-top: 0px;
+    }
+
+    .navigation {
+        justify-content: flex-start;
+    }
+
+    .navigation a {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-top: 0; 
+    }
+
+    /* Header banner */
+
+    .food-banner {
+        display: none;
+    }
+
+    .header-media {
+        color: var(--dark-color
+        );
+        background-color: #fafafa;
+        width: 412px;
+        margin-top: 250px;
+        margin-bottom: 150px;
+    }
+
+    .header-media h3 {
+        font-size: 15px;
+        color: var(--second-color);
+        font-weight: 500;
+    }
+
+    .header-media h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: var(--media-color);
+    }
+
+    .header-media h4 {
+        font-size: 23px;
+        font-weight: 300;
+        color: #737373;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .header-media button{
+        color: var(--special-color);
+        border-color: var(--special-color);
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25%;
+    }
+
+    .header-media button:hover {
+        background-color: var(--special-color);
+        color: var(--light-color);
+    }
+
+    /* Both phone layout */
+    .phone-layout {
+        width: 100%;
+        align-items: center;
+        margin-top: 280px;
+    }
+
+    /* Horizontal Line and app-works*/
+
+    .app-works {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .line,
+    .app-works {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        /* Optional: Centers the content horizontally */
+    }
+
+
+    /* Login section */
+    .login-section {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .login-section img,
+    .login-content {
+        width: 400px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        margin-left: 30px;
+    }
+
+    .login-content h3 {
+        font-size: 30px;
+    }
+
+    .login-content h2 {
+        font-size: 42px;
+    }
+
+    .login-content p {
+        font-size: 25px;
+        margin-left: 25px;
+        margin-left: 25px;
+    }
+
+    /* App sections */
+    .app-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-section img,
+    .app-content {
+        width: 400px;
+        margin-left: 30px;
+        margin-right: 30px;
+        text-align: center;
+    }
+
+
+    .app-content h3 {
+        font-size: 30px;
+    }
+
+    .app-content h2 {
+        font-size: 42px;
+    }
+
+    .app-content p {
+        font-size: 25px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    /* Payment section */
+
+    .app-works {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    /* Payment section */
+    .payment-section {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .payment-section img,
+    .payment-content {
+        width: 400px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .payment-content h3 {
+        font-size: 30px;
+    }
+
+    .payment-content h2 {
+        font-size: 42px;
+    }
+
+    .payment-content p {
+        font-size: 25px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    /* Footer banner */
+
+    .footer-image {
+        margin-bottom: 100px;
+    }
+    
+    .media-footer {
+        background-color: #252B42;
+        width: 430px;
+        margin-bottom: 100px;
+        margin-top: 100px;
+    }
+
+    .media-footer h2 {
+        font-size: 30px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .media-footer p {
+        font-weight: 100;
+        font-size: 20px;
+    }
+
+    /* footer */
+    .logo-media {
+        display: none;
+    }
+    .copyright {
+        display: none;
+    }
+
+    .hide-footer {
+        display: block;
+    }
+
+    .media-button,
+    .hide-footer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .media-paragraph {
+        display: block;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .available-para {
+        display: none;
+    }
+
+
 }
